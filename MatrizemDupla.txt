@@ -1,0 +1,254 @@
+programa
+{
+	inclua biblioteca Matematica-->mat
+	
+
+     cadeia nome[][] = {{"Antonio", "Julio","Miguel", "Pedro",  "Ronaldo"}}, nomee
+     inteiro salario[][] = {{3200, 5740, 4820, 2800, 1820}}, opcaoo
+     real comissao[][] = {{0.28, 0.24, 0.10, 0.5, 0.12}}, arre
+     inteiro horaex[][] = {{2,3,5,5,1}}
+     inteiro dias=30
+
+
+funcao inicio()
+{
+ 
+inteiro opcao
+escreva("TABELA","\n")
+escreva("NOMES", "    |   ","SALARIO",  "     |   ", "COMISSAO", "   |  ", "HORA EXTRA", "\n")
+escreva("Antonio","  |   "," 3200R$" , "     |   " ,"  12%",  "      |  ", "5h", "\n" )
+escreva("Julio",  "    |   ", " 5740R$","     |   ", "  10%","      |", "  5h","\n")
+escreva("Miguel",  "   |   "," 4820R$", "     |  ",  "   24%","      |  ", "3h","\n")
+escreva("Pedro",  "    |   "," 2800R$", "     |  ",  "   28%","      |  ", "1h","\n")
+escreva("Ronaldo",  "  |   "," 1820R$", "     |  ",  "   5%","       |  ","2h ")
+escreva("\n","_______________________________________________________")
+escreva("\n")
+
+escreva("\n","*DIGITE OPÇÃO DESEJADA*","\n")
+escreva("1)RELATÓRIO GERAL","\n")
+escreva("2)RELATÓRIO INDIVIDUAL","\n")
+escreva("3)Sair")
+
+
+leia(opcao)
+limpa()
+
+escolha(opcao){
+caso 1:
+relaGeral()
+voltMenu()
+
+pare
+
+caso 2:
+escreva("FUNCIONÁRIOS","\n")
+escreva("____________________________________________________________________________","\n")
+escreva("Digite o nome do funcionário que deseja buscar:","\n")
+leia(nomee)
+limpa()
+se(nomee == "antonio"){
+escreva("Relatório do Antônio","\n")
+escreva("____________________________________________________________________________\n")
+relatAntonio()
+voltMenu()}
+senao se(nomee == "Julio"){
+escreva("Relatório do Julio","\n")
+relatJulio()
+voltMenu()}
+senao se(nomee == "Miguel"){
+escreva("Relatório do Miguel","\n")
+relatMiguel()
+voltMenu()}
+senao se(nomee == "Pedro"){
+escreva("Relatório do Pedro","\n")
+relatPedro()
+voltMenu()}
+senao se(nomee=="Ronaldo"){
+escreva("Relatório do Ronaldo","\n")
+relatRonaldo()
+voltMenu()}
+senao
+escreva("Nome informado não consta na lista de funcionários.")
+pare 
+
+caso 3:
+escreva("Volte sempre!")
+pare
+}
+
+
+}
+
+
+
+
+funcao voltMenu(){
+
+  cadeia volta
+ 
+escreva("\n\nDeseja voltar ao menu (Sim ou Nao)? ")
+     leia(volta)
+
+     se(volta == "Sim"){
+     inicio()
+     }
+     senao{
+     escreva(" ")
+     }
+
+}
+funcao relatAntonio(){
+real soma, soma2, soma3, soma4, soma5
+soma = (salario[0][0]*0.28)
+escreva("Antonio ganha uma comissao de ", soma, "\n" )
+escreva("____________________________________________________________________________ \n")
+soma2 =(soma+salario[0][0])
+escreva("O salario total de Antonio com a comissao é de : ", soma2, "\n")
+escreva("____________________________________________________________________________ \n")
+soma3 = (salario[0][0]/dias/8)
+escreva("Antonio ganha em horas trabalhadas  ",soma3, "\n")
+escreva("____________________________________________________________________________ \n")
+soma4 = (2*13)
+escreva("Antonio ganhou em horas extras ", soma4, "\n")
+escreva("____________________________________________________________________________ \n")
+soma5= (salario[0][0]+soma2+soma4)
+escreva("O salario total de antonio é", soma5)
+
+
+
+}
+funcao relatJulio(){
+real soma, soma2, soma3, soma4, soma5
+
+soma = (salario[0][1]*0.28)
+escreva("Julio ganha uma comissao de ", soma, "\n" )
+escreva("____________________________________________________________________________ \n")
+soma2 =(soma+salario[0][1])
+escreva("O salario total de Julio com a comissao é de : ", soma2, "\n")
+escreva("____________________________________________________________________________ \n")
+soma3 = (salario[0][1]/dias/8)
+escreva("Julio ganha em horas trabalhadas  ",soma3, "\n")
+escreva("____________________________________________________________________________ \n")
+soma4 = (3*13)
+escreva("Julio ganhou em horas extras ", soma4, "\n")
+escreva("____________________________________________________________________________ \n")
+soma5= (salario[0][1]+soma2+soma4)
+escreva("O salario total de Julio é", soma5)
+
+
+
+
+}
+funcao relatMiguel(){
+real soma, soma2, soma3, soma4, soma5
+
+soma = (salario[0][2]*0.28)
+escreva("Miguel ganha uma comissao de ", soma, "\n" )
+escreva("____________________________________________________________________________ \n")
+soma2 =(soma+salario[0][2])
+escreva("O salario total de Miguel com a comissao é de : ", soma2, "\n")
+escreva("____________________________________________________________________________ \n")
+soma3 = (salario[0][2]/dias/8)
+escreva("Miguel ganha em horas trabalhadas  ",soma3, "\n")
+escreva("____________________________________________________________________________ \n")
+soma4 = (5*13)
+escreva("Miguel ganhou em horas extras ", soma4, "\n")
+escreva("____________________________________________________________________________ \n")
+soma5= (salario[0][2]+soma2+soma4)
+escreva("O salario total de Miguel é", soma5)
+
+
+}
+funcao relatPedro(){
+real soma, soma2, soma3, soma4, soma5
+
+soma = (salario[0][3]*0.28)
+escreva("Pedro ganha uma comissao de ", soma, "\n" )
+escreva("____________________________________________________________________________ \n")
+soma2 =(soma+salario[0][3])
+escreva("O salario total de Pedro com a comissao é de : ", soma2, "\n")
+escreva("____________________________________________________________________________ \n")
+soma3 = (salario[0][3]/dias/8)
+escreva("Pedro ganha em horas trabalhadas  ",soma3, "\n")
+escreva("____________________________________________________________________________ \n")
+soma4 = (5*13)
+escreva("Pedro ganhou em horas extras ", soma4, "\n")
+escreva("____________________________________________________________________________ \n")
+soma5= (salario[0][3]+soma2+soma4)
+escreva("O salario total de Pedro é", soma5)
+
+
+
+}
+funcao relatRonaldo(){
+real soma, soma2, soma3, soma4, soma5
+
+
+soma = (salario[0][4]*0.28)
+escreva("Ronaldo ganha uma comissao de ", soma, "\n" )
+escreva("____________________________________________________________________________ \n")
+soma2 =(soma+salario[0][4])
+escreva("O salario total de Ronaldo com a comissao é de : ", soma2, "\n")
+escreva("____________________________________________________________________________ \n")
+soma3 = ((salario[0][4]/dias)/8)
+escreva("Ronaldo ganha em horas trabalhadas  ",soma3, "\n")
+escreva("____________________________________________________________________________ \n")
+soma4 = (1*13)
+escreva("Ronaldo ganhou em horas extras ", soma4, "\n")
+escreva("____________________________________________________________________________ \n")
+soma5= (salario[0][4]+soma2+soma4)
+escreva("O salario total de Ronaldo é", soma5)
+
+}
+funcao relaGeral(){  
+ real hoe1,hoe2,hoe3,hoe4,hoe5
+ real cos1,cos2,cos3,cos4,cos5,hora1,hora2,hora3,hora4,hora5,sah1,sah2,sah3,sah4,sah5
+ real dia = 30,tem = 8
+ inteiro he[][] = {{2,3,5,5,1}}
+
+   cos1 = salario[0][0] * comissao[0][0]      
+   cos2 = salario[0][1] * comissao[0][1]
+   cos3 = salario[0][2] * comissao[0][2]
+   cos4 = salario[0][3] * comissao[0][3]
+   cos5 = salario[0][4] * comissao[0][4]
+
+   hora1 = salario[0][0]/dia
+   hora2 = salario[0][1]/dia
+   hora3 = salario[0][2]/dia
+   hora4 = salario[0][3]/dia
+   hora5 = salario[0][4]/dia
+
+   sah1 = hora1/8
+   sah2 = hora2/8
+   sah3 = hora3/8
+   sah4 = hora4/8
+   sah5 = hora5/8
+
+   hoe1 = he[0][0]*sah1
+   hoe2 = he[0][1]*sah2
+   hoe3 = he[0][2]*sah3
+   hoe4 = he[0][3]*sah4
+   hoe5 = he[0][4]*sah5
+
+   real arredonda,arredonda2,arredonda3,arredonda4,arredonda5,comio4,comio1
+   real hoe11 = 26.666666666666668,hoe22 = 75.61,hoe33 = 100.41666666666666,hoe44 = 58.33333333333333333,hoe55 = 7.5833333333333333,comi4 = 784.0000000000000001,comi1 = 896.00000000000000001
+   
+   
+   arredonda = mat.arredondar(hoe11, 1)
+   arredonda2 = mat.arredondar(hoe22, 1)
+   arredonda3 = mat.arredondar(hoe33, 1)
+   arredonda4 = mat.arredondar(hoe44, 1)
+   arredonda5 = mat.arredondar(hoe55, 1)
+   comio4 = mat.arredondar(comi4, 1)
+   comio1 = mat.arredondar(comi1, 1)
+
+   escreva("\nNOME:antonio|SALARIO:3200|COMISSÃO:",comio1,"  |","HORA EXTRA:",arredonda)  
+   escreva("\nNOME:julio  |SALARIO:5740|COMISSÃO:",cos2," |","HORA EXTRA:",arredonda2)
+  escreva("\nNOME:miguel |SALARIO:4820|COMISSÃO:",cos3,"  |","HORA EXTRA:",arredonda3)
+  escreva("\nNOME:pedro  |SALARIO:2800|COMISSÃO:",comi4,"  |","HORA EXTRA:",arredonda4)
+   escreva("\nNOME:ronaldo|SALARIO:1820|COMISSÃO:",cos5,"  |","HORA EXTRA:",arredonda5)
+
+
+
+}
+}
